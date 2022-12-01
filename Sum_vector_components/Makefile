@@ -1,0 +1,19 @@
+#Makefile Jonay Faas Garcia 13/12/2021
+
+CXX = g++
+CXXFLAGS = -Wall -std=c++17 -pedantic
+######################################
+files = *cpp
+######################################
+all: programa
+
+programa: $(files)
+	@$(CXX) $(CXXFLAGS) -o programa $(files)
+
+######################################
+.PHONY: clean
+######################################
+clean:
+	@echo "cleaning up the directory..."
+	@rm -rf *.o *gch *.out *.cc.swp programa
+######################################
